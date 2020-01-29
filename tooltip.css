@@ -1,0 +1,29 @@
+.tip{
+	position: relative;
+	cursor: pointer;
+	font-size: 20px;
+}
+.tooltip{
+	position: absolute;
+	/* calc属性更加具有适应性，100%代表tip类整体的高度 */
+	top: calc(100% + 10px);
+	background: #000;
+	color: #fff;
+	width: 200px;
+	padding: 6px;
+	font-size: 12px;
+	border-radius: 4px;
+	display: none;
+}
+.tip:hover .tooltip{
+	display: block;
+}
+.tooltip:before{
+	content: '';
+	position: absolute;
+	top: -16px;
+	left: 10px;
+	/* 边框呈现透明色 */
+	border: 8px solid transparent;
+	border-bottom-color: #000;
+}
